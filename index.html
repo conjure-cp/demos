@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!--
+        This disables zooming on mobile. Replace with the following to enable it again.
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Constraint Programming demos</title>
+
+    <link rel="canonical" href="http://demos.constraintmodelling.org/">
+
+    <!-- import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- import fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- empty favicon -->
+    <link
+        href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
+        rel="icon" type="image/x-icon">
+
+    <style>
+        /* from https://miketricking.github.io/bootstrap-image-hover/ */
+        .hovereffect {
+            width: 90%;
+            height: 90%;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            padding: 10%;
+        }
+
+        .hovereffect .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            /* background-color: rgba(75, 75, 75, 0.7); */
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            pointer-events: none;
+        }
+
+        .hovereffect img {
+            display: block;
+            position: relative;
+        }
+
+        .hovereffect:hover img {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .hovereffect h2 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            -webkit-transform: translateY(45px);
+            -ms-transform: translateY(45px);
+            transform: translateY(45px);
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .hovereffect:hover h2 {
+            -webkit-transform: translateY(100px);
+            -ms-transform: translateY(100px);
+            transform: translateY(100px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-md" style="margin-top:30px">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3"> <!-- new age jumbotron -->
+            <div>
+                <div class="row" style="display:flex; align-items:center;">
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                        <h1 class="display-5 fw-bold">CP demos</h1>
+                        <p>We collect a few web based demonstrator applications in this website.</p>
+                        <p>These are proof of concept projects to showcase how our pipeline of software tools work.</p>
+                        <p>They all use <a href="https://github.com/conjure-cp/conjure">Conjure</a> to solve the
+                            respective problems, but the user interface is developed by
+                            project students at the School of Computer Science at the University of St Andrews.</p>
+                        <p>People involved in developing and maintaining each demo are referenced in the relevant pages.
+                        </p>
+                        <p>The source code for each demo is hosted in a Github repository. Please feel free to let us
+                            know if there are any issues with the demos using the issue tracker in the relevant
+                            repository.</p>
+                        <br><br><br>
+                    </div>
+                </div>
+                <div class="row center-block">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="hovereffect">
+                            <a href="permutation-patterns"><img class="img-responsive"
+                                    style="width: 100%; aspect-ratio: 1.5; object-fit: contain;"
+                                    src="static/tomatoes.jpg" alt="Permutation patterns"></a>
+                            <div class="overlay">
+                                <h2>Permutation patterns</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="hovereffect">
+                            <a href="university-timetabling"><img class="img-responsive"
+                                    style="width: 100%; aspect-ratio: 1.5; object-fit: contain;"
+                                    src="static/timetabling.jpg" alt="University timetabling"></a>
+                            <div class="overlay">
+                                <h2>University timetabling</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="hovereffect">
+                            <a href="nurse-rostering"><img class="img-responsive"
+                                    style="width: 100%; aspect-ratio: 1.5; object-fit: contain;" src="static/nurse.jpg"
+                                    alt="Nurse rostering"></a>
+                            <div class="overlay">
+                                <h2>Nurse rostering</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="hovereffect">
+                            <a href="task-allocation"><img class="img-responsive"
+                                    style="width: 100%; aspect-ratio: 1.5; object-fit: contain;" src="static/task.jpg"
+                                    alt="Task allocation"></a>
+                            <div class="overlay">
+                                <h2>Task allocation</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
